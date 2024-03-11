@@ -1,0 +1,1 @@
+export const base_url = "https://rapieat-4072a-default-rtdb.firebaseio.com/"

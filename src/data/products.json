@@ -1,0 +1,338 @@
+[
+    {
+        "id": 1,
+        "title": "Empanadas de carne",
+        "description": "Las empanadas de carne cortada a cuchillo son ideales para disfrutar en cualquier ocasión, ya sea como entrada, plato principal o parte de una picada.",
+        "price": 7000,
+        "stock": 120,
+        "category": "empanadas",
+        "thumbnail": "https://i.postimg.cc/f310f2gZ/icono-Empanada.png",
+        "images": [
+            "https://i.postimg.cc/ht3cmLYP/1.jpg",
+            "https://postimg.cc/sBrtVgg1",
+            "https://postimg.cc/hfNk5rFL"
+        ]
+    },
+    {
+        "id":2,
+        "title":"Empanadas Jamon y Queso",
+        "description":"La empanada rellena con jamon,queso y crema",
+        "price":6500,
+        "stock":120,
+        "category":"empanadas",
+        "thumbnail":"https://i.postimg.cc/f310f2gZ/icono-Empanada.png",
+        "images":[
+            "https://i.postimg.cc/W1V0tbbX/1.jpg",
+            "https://postimg.cc/v4c4RK7S"
+        ]
+    },
+    {
+        "id":3,
+        "title":"Empanadas de espinaca y queso",
+        "description":"Empanada rellena con espinaca y queso",
+        "price":5500,
+        "stock":96,
+        "category":"empanadas",
+        "thumbnail":"https://i.postimg.cc/f310f2gZ/icono-Empanada.png",
+        "images":[
+            "https://i.postimg.cc/Kzrs1c6b/1.jpg",
+            "https://postimg.cc/xk05vHw2",
+            "https://postimg.cc/hX8MQM3s"
+        ]
+    },
+    {
+        "id":4,
+        "title":"Ensalada Cesar",
+        "description":"Lechuga romana, queso parmesano, croutons y un aderezo cremoso a base de yema de huevo, aceite de oliva, vinagre, limón y salsa Worcestershire.",
+        "price":4000,
+        "stock":20,
+        "category":"ensaladas",
+        "thumbnail":"https://i.postimg.cc/870FTXGW/icono-Ensalada.png",
+        "images":[
+            "https://i.postimg.cc/GpQbCRXB/1.jpg",
+            "https://postimg.cc/4HTjTnKN",
+            "https://postimg.cc/ygR2508b"
+        ]
+    },
+    {
+        "id":5,
+        "title":"Ensalada Griega",
+        "description":"Los ingredientes principales son el tomate, el pepino, la cebolla morada, el pimiento, el queso feta y las aceitunas negras",
+        "price":4500,
+        "stock":20,
+        "category":"ensaladas",
+        "thumbnail":"https://i.postimg.cc/870FTXGW/icono-Ensalada.png",
+        "images":[
+            "https://i.postimg.cc/Kcpb5Fqf/1.jpg",
+            "https://postimg.cc/XrszH49m",
+            "https://postimg.cc/JGcgXb01"
+        ]
+    },
+    {
+        "id":6,
+        "title":"Ensalada Waldorf",
+        "description":"Ensalada de apio, manzana verde, crema y nueces",
+        "price":5000,
+        "stock":20,
+        "category":"ensaladas",
+        "thumbnail":"https://i.postimg.cc/870FTXGW/icono-Ensalada.png",
+        "images":[
+            "https://i.postimg.cc/SNNxdDfL/1.jpg",
+            "https://postimg.cc/JsWWjrRL",
+            "https://postimg.cc/mt9sczfj"
+        ]
+    },
+    {
+        "id":7,
+        "title":"Hamburguesa Americana",
+        "description":"Medallon de carne, pepinillos, cebolla, tomate, lechuga y queso cheddar",
+        "price":5000,
+        "stock":30,
+        "category":"Hamburguesas",
+        "thumbnail":"https://i.postimg.cc/rKqRjtgd/icono-Hamburguesa.png",
+        "images":[
+            "https://i.postimg.cc/65MR97QK/1.jpg",
+            "https://postimg.cc/753hvtKg",
+            "https://postimg.cc/9D50nHYm"
+        ]
+    },
+    {
+        "id":8,
+        "title":"Hamburguesa BBQ",
+        "description":"Medallón de carne a la parrilla con salsa BBQ, pepinillo, cebollita y tomate cherry",
+        "price":5500,
+        "stock":30,
+        "category":"Hamburguesas",
+        "thumbnail":"https://i.postimg.cc/rKqRjtgd/icono-Hamburguesa.png",
+        "images":[
+            "https://i.postimg.cc/R02KkqTR/1.jpg",
+            "https://postimg.cc/JtdGjd6q",
+            "https://postimg.cc/Rq0W6zRh"
+        ]
+    },
+    {
+        "id":9,
+        "title":"Hamburguesa CheeseBurguer",
+        "description":"Medallon de carne con extra queso cheddar",
+        "price":4500,
+        "stock":30,
+        "category":"Hamburguesas",
+        "thumbnail":"https://i.postimg.cc/rKqRjtgd/icono-Hamburguesa.png",
+        "images":[
+            "https://i.postimg.cc/Zn7twkr1/1.jpg",
+            "https://postimg.cc/SJcPFHMQ",
+            "https://postimg.cc/qN05kQss"
+        ]
+    },
+    {
+        "id":10,
+        "title":"Pizza Muzzarella",
+        "description":"Pizza con masa casera y 450gr de muzzarella fresca",
+        "price":6500,
+        "stock":30,
+        "category":"Pizzas",
+        "thumbnail":"https://i.postimg.cc/Hc58ZwfM/icono-Pizza.png",
+        "images":[
+            "https://i.postimg.cc/DzzTQ2Jd/1.jpg",
+            "https://postimg.cc/jDDmpSPp",
+            "https://postimg.cc/dD9bdXJx"
+        ]
+    },
+    {
+        "id":11,
+        "title":"Pizza Pepperoni",
+        "description":"Masa casera con  pepperoni a la parmesano.",
+        "price":7200,
+        "stock":15,
+        "category":"Pizzas",
+        "thumbnail":"https://i.postimg.cc/Hc58ZwfM/icono-Pizza.png",
+        "images":[
+            "https://i.postimg.cc/cJsdCRBH/1.jpg",
+            "https://postimg.cc/DWJ9VwkW",
+            "https://postimg.cc/PPKsY7Qq"
+        ]
+    },
+    {
+        "id":12,
+        "title":"Pizza Jamon & Rucula",
+        "description":"Pizza de masa casera con jamon crudo, rucula, muzzarella y aceite de oliva. ",
+        "price":7500,
+        "stock":20,
+        "category":"Pizzas",
+        "thumbnail":"https://i.postimg.cc/Hc58ZwfM/icono-Pizza.png",
+        "images":[
+            "https://i.postimg.cc/TPZbSjLt/1.jpg",
+            "https://postimg.cc/0M5jYytB",
+            "https://postimg.cc/67XyQ0Cw"
+        ]
+    },
+    {
+        "id":13,
+        "title":"Miso Ramen",
+        "description":"pasta de miso (soja fermentada) para darle sabor al caldo, que suele ser de pollo o cerdo. Los fideos son más gruesos y elásticos, y los toppings pueden variar según la estación, pero suelen incluir maíz, mantequilla, brotes de soja, cebolla, carne de cerdo y huevo.",
+        "price":4000,
+        "stock":15,
+        "category":"Ramen",
+        "thumbnail":"https://i.postimg.cc/crTgb45F/icono-Ramen.png",
+        "images":[
+            "https://i.postimg.cc/ydPWX29C/1.jpg",
+            "https://postimg.cc/yg27xmGs",
+            "https://postimg.cc/fSXD934X"
+        ]
+    },
+    {
+        "id":14,
+        "title":"Shoyu ramen",
+        "description":"Los fideos son finos y rizados, y los toppings suelen ser char siu (carne de cerdo asada), menma (brotes de bambú), naruto (pasta de pescado con espiral roja), negi (cebollino) y huevo duro",
+        "price":4000,
+        "stock":15,
+        "category":"Ramen",
+        "thumbnail":"https://i.postimg.cc/crTgb45F/icono-Ramen.png",
+        "images":[
+            "https://i.postimg.cc/FHxJrfWx/WhatsApp_Image_2024-02-21_at_09.19.44.jpg",
+            "https://postimg.cc/dhL0n0K7",
+            "https://postimg.cc/Wh93MkxL"
+        ]
+    },
+    {
+        "id":15,
+        "title":"Tonkotsu ramen",
+        "description":"s el tipo de ramen más famoso en la región de Kyushu, que se distingue por tener un caldo blanco y cremoso, hecho con huesos de cerdo cocidos a fuego lento durante horas. Los fideos son finos y rectos, y los toppings más habituales son char siu, negi, beni shoga (jengibre encurtido), kikurage (hongo oreja de madera) y ajitsuke tamago (huevo marinado)",
+        "price":4000,
+        "category":"Ramen",
+        "stock":15,
+        "thumbnail":"https://i.postimg.cc/crTgb45F/icono-Ramen.png",
+        "images":[
+            "https://i.postimg.cc/PxcMW6wy/WhatsApp_Image_2024-02-21_at_09.19.45_(1).jpg",
+            "https://postimg.cc/sML5JXvx",
+            "https://postimg.cc/7G37DnXJ"
+        ]
+    },
+    {
+        "id":16,
+        "title":"Sandwich de albondigas",
+        "description":"Sandwich con albondigas y salsa",
+        "price":3500,
+        "category":"Sandwichs",
+        "stock":30,
+        "thumbnail":"https://i.postimg.cc/w1vy88Cg/icono-Sandwich.png",
+        "images":[
+            "https://i.postimg.cc/jq3jhpCt/1.jpg",
+            "https://postimg.cc/jLbTLQcd",
+            "https://postimg.cc/WhwvrFYm"
+        ]
+    },
+    {
+        "id":17,
+        "title":"Sandwich Italiano",
+        "description":"Sandwich con fiambre italiano y verduras",
+        "price":3800,
+        "stock":20,
+        "category":"Sandwichs",
+        "thumbnail":"https://i.postimg.cc/w1vy88Cg/icono-Sandwich.png",
+        "images":[
+            "https://i.postimg.cc/52Yp0WQ0/3.png",
+            "https://postimg.cc/4mVz1ZpQ",
+            "https://postimg.cc/TKxn7S9M"
+        ]
+    },
+    {
+        "id":18,
+        "title":"Sandwich Pollo BBQ",
+        "description":"Sandwich de pollo con salsa BBQ",
+        "price":4000,
+        "stock":20,
+        "category":"Sandwichs",
+        "thumbnail":"https://i.postimg.cc/w1vy88Cg/icono-Sandwich.png",
+        "images":[
+            "https://i.postimg.cc/rF1cd768/2.jpg",
+            "https://postimg.cc/JGzSv64g",
+            "https://postimg.cc/0bXhsYzN"
+        ]
+    },
+    {
+        "id":19,
+        "title":"Sushi Maki",
+        "description":"Es el tipo de sushi más conocido y común, que se caracteriza por estar enrollado en una hoja de alga nori. El relleno suele ser de arroz y uno o más ingredientes, como pescado, aguacate, pepino, queso crema, etc. Se corta en porciones circulares y se come con palillos",
+        "price":7000,
+        "stock":200,
+        "category":"Sushi",
+        "thumbnail":"https://i.postimg.cc/vDr65v7F/icono-Sushi.png",
+        "images":[
+            "https://i.postimg.cc/447ZbmcN/1.jpg",
+            "https://postimg.cc/s14bxFN1",
+            "https://postimg.cc/yk6tSfMj"
+        ]
+    },
+    {
+        "id":20,
+        "title":"Sushi Nigiri",
+        "description":"Es el tipo de sushi más sencillo y elegante, que se compone de una bolita de arroz moldeada a mano y cubierta con una lámina de pescado crudo, como salmón, atún, anguila, etc. A veces se sujeta con una tira de alga nori. Se come con los dedos y se moja la parte del pescado en la salsa de soja",
+        "price":6500,
+        "stock":200,
+        "category":"Sushi",
+        "thumbnail":"https://i.postimg.cc/vDr65v7F/icono-Sushi.png",
+        "images":[
+            "https://i.postimg.cc/fWmWQVRq/3.jpg",
+            "https://postimg.cc/Wq4RjXj5",
+            "https://postimg.cc/w3xYhTJD"
+        ]
+    },
+    {
+        "id":21,
+        "title":"Sushi Uramaki",
+        "description":" Es el tipo de sushi más moderno y occidental, que se diferencia del maki en que el alga nori va en el interior y el arroz en el exterior. El relleno suele ser más variado y elaborado, como tempura, cangrejo, mango, etc. Se suele decorar con semillas de sésamo o huevas de pescado. Se come con palillos y se moja el arroz en la salsa de soja",
+        "price":7500,
+        "stock":200,
+        "category":"Sushi",
+        "thumbnail":"https://i.postimg.cc/vDr65v7F/icono-Sushi.png",
+        "images":[
+            "https://i.postimg.cc/mkkrQs9z/3.jpg",
+            "https://postimg.cc/7GJDjq1K",
+            "https://postimg.cc/ZvkZSXV4"
+        ]
+    },
+    {
+        "id":22,
+        "title":"Tacos de ternera",
+        "description":"Tacos de ternera salteada en verduras",
+        "price":8000,
+        "stock":200,
+        "category":"Tacos",
+        "thumbnail":"https://i.postimg.cc/ns9XrKVW/icono-Tacos.png",
+        "images":[
+            "https://i.postimg.cc/ZRSW12d0/3.jpg",
+            "https://postimg.cc/RWQZSCHh",
+            "https://postimg.cc/06V5StZq"
+        ]
+    },
+    {
+        "id":23,
+        "title":"Tacos de Cerdo",
+        "description":"Tacos de carne de cerdo con verduras salteadas",
+        "price":8500,
+        "stock":200,
+        "category":"Tacos",
+        "thumbnail":"https://i.postimg.cc/ns9XrKVW/icono-Tacos.png",
+        "images":[
+            "https://i.postimg.cc/Qdn5yjsb/2.jpg",
+            "https://postimg.cc/XrdpZSrG",
+            "https://postimg.cc/ppgmXXLM"
+        ]
+    },
+    {
+        "id":24,
+        "title":"Tacos de pollo",
+        "description":"Tacos con carne de pollo mechada y salteada con verduras",
+        "price":7500,
+        "stock":200,
+        "category":"Tacos",
+        "thumbnail":"https://i.postimg.cc/ns9XrKVW/icono-Tacos.png",
+        "images":[
+            "https://i.postimg.cc/PxBCkM5V/3.jpg",
+            "https://postimg.cc/QKNX0Ckw",
+            "https://postimg.cc/5YS4BLv8"
+        ]
+    }
+
+]

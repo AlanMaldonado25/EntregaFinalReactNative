@@ -1,0 +1,31 @@
+
+[
+    {
+        "id":23,
+        "title":"Tacos de Cerdo",
+        "description":"Tacos de carne de cerdo con verduras salteadas",
+        "price":8500,
+        "stock":200,
+        "category":"Tacos",
+        "thumbnail":"https://i.postimg.cc/ns9XrKVW/icono-Tacos.png",
+        "images":[
+            "https://i.postimg.cc/Qdn5yjsb/2.jpg",
+            "https://postimg.cc/XrdpZSrG",
+            "https://postimg.cc/ppgmXXLM"
+        ]
+    },
+    {
+        "id":24,
+        "title":"Tacos de pollo",
+        "description":"Tacos con carne de pollo mechada y salteada con verduras",
+        "price":7500,
+        "stock":200,
+        "category":"Tacos",
+        "thumbnail":"https://i.postimg.cc/ns9XrKVW/icono-Tacos.png",
+        "images":[
+            "https://i.postimg.cc/PxBCkM5V/3.jpg",
+            "https://postimg.cc/QKNX0Ckw",
+            "https://postimg.cc/5YS4BLv8"
+        ]
+    }
+]
