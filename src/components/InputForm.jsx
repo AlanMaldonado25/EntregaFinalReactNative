@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     width: "90%",
     fontSize: 25,
     fontFamily: "InterRegular",
-    color:colors.vermillion,
+    color:colors.jet,
     marginVertical:5,
   },
   error: {
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     width: "90%",
     borderWidth: 0,
     borderBottomWidth: 3,
-    borderBottomColor: colors.avocado,
+    borderBottomColor: colors.jet,
     padding: 2,
     fontFamily: "InterRegular",
     fontSize: 20,

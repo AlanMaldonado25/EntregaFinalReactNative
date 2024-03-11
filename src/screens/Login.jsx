@@ -52,9 +52,18 @@ const Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerButton}>
-        <Text style={styles.subtitle}>Login</Text>
+        <View style={styles.containerSubtitle}>
+          <Text style={styles.subtitle}>Login<EvilIcons name="arrow-down" size={30}/></Text>
+        </View>
+        <Pressable
+          onPress={() => navigation.navigate("Signup")}
+          style={styles.btnRegister}
+        >
+          <Text style={styles.subtitle}>Registrarse<EvilIcons name="arrow-right" size={30} color={colors.ivory} /></Text>
+          
+        </Pressable>
       </View>
-      <View>
+      <View style={styles.containerForm}>
         <InputForm label={"Email"} error={errorMail} onChange={setEmail} />
         <InputForm
           label={"Password"}
@@ -62,22 +71,13 @@ const Login = ({ navigation }) => {
           onChange={setPassword}
           isSecure={true}
         />
-      </View>
-      <View style={styles.submit}>
-        {result.isLoading ? (
-          <ActivityIndicator size="large" color="#0000ff" />
-        ) : (
-          <SubmitButton title={"Login"} onPress={onSubmit} />
-        )}
-      </View>
-      <View style={styles.containerRegister}>
-        <Pressable
-          onPress={() => navigation.navigate("Signup")}
-          style={styles.btnRegister}
-        >
-          <Text style={styles.subtitle}>Registrarse</Text>
-          <EvilIcons name="arrow-right" size={24} color={colors.ivory} />
-        </Pressable>
+        <View style={styles.submit}>
+          {result.isLoading ? (
+            <ActivityIndicator size="large" color="#0000ff" />
+          ) : (
+            <SubmitButton title={"Login"} onPress={onSubmit} />
+          )}
+        </View>
       </View>
     </View>
   );
@@ -90,11 +90,22 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
+    marginHorizontal:35
+  },
+  containerForm: {
+    justifyContent: 'space-around',
+    backgroundColor: colors.avocado,
+    height: '80%',
+    marginHorizontal: 35,
+    borderBottomLeftRadius:20,
+    borderBottomRightRadius:20,
+    borderTopRightRadius:20,
   },
   container: {
     backgroundColor: colors.jet,
-    height: "100%",
-    justifyContent: "space-around",
+    gap:0,
+    padding: 30,
+    height:'100%'
   },
   submit: {
     alignItems: "center",
@@ -102,19 +113,23 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 30,
     color: colors.ivory,
+    flexDirection:'row',
+    alignItems:'center'
   },
   btnRegister: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: colors.avocado,
-    width: "50%",
-    borderRadius: 10,
-    padding: 10,
+    width: '50%',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  containerRegister:{
-    width:'100%',
+  containerSubtitle:{
+    backgroundColor:colors.avocado,
+    width:'50%',
     justifyContent:'center',
+    alignItems:'center',
+    height:50,
+    borderTopLeftRadius:15,
+    borderTopRightRadius:15,
+    flexDirection:'row',
     alignItems:'center'
   }
 });
