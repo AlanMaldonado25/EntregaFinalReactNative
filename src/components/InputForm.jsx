@@ -12,7 +12,7 @@ const InputForm = ({ label, error, onChange, isSecure }) => {
 
   return (
     <View style={styles.inputContainer}>
-      <Text style={styles.subtitle}>{label}</Text>
+      <Text style={styles.label}>{label}</Text>
       <TextInput
         style={styles.input}
         value={input}
@@ -32,25 +32,31 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     width: "100%",
+    marginBottom:15,
+
   },
-  subtitle: {
+  label: {
     width: "90%",
-    fontSize: 16,
+    fontSize: 25,
     fontFamily: "InterRegular",
+    color:colors.vermillion,
+    marginVertical:5,
   },
   error: {
-    fontSize: 16,
-    color: "red",
+    fontSize: 20,
+    color: colors.vermillion,
     fontFamily: "InterRegular",
     fontStyle: "italic",
+    marginTop:10,
   },
   input: {
     width: "90%",
     borderWidth: 0,
     borderBottomWidth: 3,
-    borderBottomColor: colors.blue_100,
+    borderBottomColor: colors.avocado,
     padding: 2,
     fontFamily: "InterRegular",
-    fontSize: 14,
+    fontSize: 20,
+    color:colors.ivory
   },
 });
