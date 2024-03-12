@@ -1,6 +1,7 @@
 import { FlatList, StyleSheet, View } from "react-native";
 import { useGetCategoriesQuery } from "../services/shopService";
 import CategoryItem from "./CategoryItem";
+import {colors} from "../global/colors"
 
 function Categories({ navigation }) {
   // const categories = useSelector((state) => state.shopReducer.value.categories);
@@ -26,5 +27,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: "100%",
+    backgroundColor:colors.jet,
+    textAlign:'center',
+    height:'100%',
   },
 });

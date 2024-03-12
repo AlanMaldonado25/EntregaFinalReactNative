@@ -4,7 +4,7 @@ import ShopStack from "../navigation/ShopStack";
 import CartStack from "./CartStack";
 import { StyleSheet, Text, View } from "react-native";
 import { colors } from "../global/colors";
-import { Entypo, AntDesign, FontAwesome, Ionicons } from "@expo/vector-icons";
+import { Entypo, AntDesign, FontAwesome, Ionicons,FontAwesome6 } from "@expo/vector-icons";
 import OrderStack from "./OrderStack";
 import MyProfileStack from "./MyProfileStack";
 
@@ -25,8 +25,8 @@ const TabNavigator = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <View style={styles.tabContainer}>
-                <Entypo name="shop" size={30} color={focused ? "black" : "grey"} />
-                <Text style={{ color: focused ? "black" : "grey" }}>Shop</Text>
+                <FontAwesome6 name="shop" size={30} color={focused ? colors.orange : colors.ivory} />
+                <Text style={{ color: focused ? colors.orange : colors.ivory, marginTop:5}}>Shop</Text>
               </View>
             );
           },
@@ -39,12 +39,12 @@ const TabNavigator = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <View style={styles.tabContainer}>
-                <AntDesign
-                  name="shoppingcart"
+                <FontAwesome
+                  name="shopping-cart"
                   size={30}
-                  color={focused ? "black" : "grey"}
+                  color={focused ? colors.orange : colors.ivory}
                 />
-                <Text style={{ color: focused ? "black" : "grey" }}>Cart</Text>
+                <Text style={{ color:focused ? colors.orange : colors.ivory, marginTop:5}}>Cart</Text>
               </View>
             );
           },
@@ -57,12 +57,12 @@ const TabNavigator = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <View style={styles.tabContainer}>
-                <FontAwesome
-                  name="list-ul"
+                <AntDesign
+                  name="copy1"
                   size={30}
-                  color={focused ? "black" : "grey"}
+                  color={focused ? colors.orange : colors.ivory}
                 />
-                <Text style={{ color: focused ? "black" : "grey" }}>Orders</Text>
+                <Text style={{ color:focused ? colors.orange : colors.ivory, marginTop:5}}>Orders</Text>
               </View>
             );
           },
@@ -78,9 +78,9 @@ const TabNavigator = () => {
                 <Ionicons
                   name="person-circle-outline"
                   size={30}
-                  color={focused ? "black" : "grey"}
+                  color={focused ? colors.orange : colors.ivory}
                 />
-                <Text style={{ color: focused ? "black" : "grey" }}>My profile</Text>
+                <Text style={{ color:focused ? colors.orange : colors.ivory, marginTop:5,width:100,textAlign:'center'}}>My profile</Text>
               </View>
             );
           },
@@ -94,11 +94,14 @@ export default TabNavigator;
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: colors.blue_100,
-    height: 70,
+    backgroundColor: colors.jet,
+    height: 90,
+    padding:20
   },
   tabContainer: {
     justifyContent: "center",
     alignItems: "center",
+    width:'100%',
+    margin:0
   },
 });

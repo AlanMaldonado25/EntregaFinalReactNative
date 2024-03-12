@@ -67,23 +67,25 @@ const Signup = ({ navigation }) => {
           <Text style={styles.subtitle}>Login<EvilIcons name="arrow-left" size={30} color={colors.ivory} /></Text>
         </Pressable>
         <View style={styles.containerSubtitle}>
-          <Text style={styles.subtitle}>Registrarse<EvilIcons name="arrow-down" size={30}/></Text>
+          <Text style={styles.subtitle}>Registrarse<EvilIcons name="arrow-down" size={30} /></Text>
         </View>
       </View>
       <View style={styles.containerForm}>
-        <InputForm label={"Email"} error={errorMail} onChange={setEmail} />
-        <InputForm
-          label={"Password"}
-          error={errorPassword}
-          onChange={setPassword}
-          isSecure={true}
-        />
-        <InputForm
-          label={"Confirm password"}
-          error={errorConfirmPassword}
-          onChange={setConfirmPassword}
-          isSecure={true}
-        />
+        <View>
+          <InputForm label={"Email"} error={errorMail} onChange={setEmail} />
+          <InputForm
+            label={"Password"}
+            error={errorPassword}
+            onChange={setPassword}
+            isSecure={true}
+          />
+          <InputForm
+            label={"Confirm password"}
+            error={errorConfirmPassword}
+            onChange={setConfirmPassword}
+            isSecure={true}
+          />
+        </View>
         <View style={styles.submit}>
           <SubmitButton title={"Register"} onPress={onSubmit} />
         </View>
@@ -105,25 +107,25 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    marginHorizontal: 35
+    marginHorizontal: 5
   },
   containerForm: {
     justifyContent: 'space-around',
     backgroundColor: colors.avocado,
     height: '80%',
-    marginHorizontal: 35,
+    marginHorizontal: 5,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     borderTopLeftRadius: 20,
   },
-  submit:{
-    alignItems:'center'
+  submit: {
+    alignItems: 'center'
   },
   subtitle: {
     fontSize: 30,
     color: colors.ivory,
-    flexDirection:'row',
-    alignItems:'center'
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   containerSubtitle: {
     backgroundColor: colors.avocado,
@@ -135,7 +137,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 15,
     flexDirection: 'row',
   },
-  btnLogin:{
+  btnLogin: {
     width: '50%',
     justifyContent: 'center',
     alignItems: 'center'

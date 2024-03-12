@@ -29,11 +29,14 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     padding: 10,
     justifyContent: "center",
-    alignItems: "flex-start",
-    backgroundColor: colors.blue_200,
+    alignItems: "center",
+    backgroundColor: colors.orange,
     borderRadius: 10,
   },
   text: {
-    fontSize: 20,
+    fontSize: 25,
+    textTransform:'uppercase',
+    color:colors.ivory,
+    fontWeight:'bold'
   },
 });

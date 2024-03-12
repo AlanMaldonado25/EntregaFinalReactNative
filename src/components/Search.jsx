@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
-
+import {colors} from '../global/colors'
 const Search = ({ onSearch }) => {
   const [input, setInput] = useState("");
 
@@ -28,10 +28,10 @@ const Search = ({ onSearch }) => {
           placeholder="Buscar producto..."
         />
         <Pressable onPress={handleSearch}>
-          <AntDesign name="search1" size={25} color="black" />
+          <AntDesign name="search1" size={25} color={colors.orange} />
         </Pressable>
         <Pressable onPress={removeInput}>
-          <Entypo name="circle-with-cross" size={25} color="black" />
+          <Entypo name="circle-with-cross" size={25} color={colors.orange} />
         </Pressable>
       </View>
     </View>
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
+    marginBottom:20,
   },
   inputContainer: {
     flexDirection: "row",
@@ -59,5 +60,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: "80%",
     fontSize: 20,
+    borderColor:colors.orange,
+    color:colors.ivory,
   },
 });

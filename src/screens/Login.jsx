@@ -53,24 +53,26 @@ const Login = ({ navigation }) => {
     <View style={styles.container}>
       <View style={styles.containerButton}>
         <View style={styles.containerSubtitle}>
-          <Text style={styles.subtitle}>Login<EvilIcons name="arrow-down" size={30}/></Text>
+          <Text style={styles.subtitle}>Login<EvilIcons name="arrow-down" size={30} /></Text>
         </View>
         <Pressable
           onPress={() => navigation.navigate("Signup")}
           style={styles.btnRegister}
         >
           <Text style={styles.subtitle}>Registrarse<EvilIcons name="arrow-right" size={30} color={colors.ivory} /></Text>
-          
+
         </Pressable>
       </View>
       <View style={styles.containerForm}>
-        <InputForm label={"Email"} error={errorMail} onChange={setEmail} />
-        <InputForm
-          label={"Password"}
-          error={errorPassword}
-          onChange={setPassword}
-          isSecure={true}
-        />
+        <View>
+          <InputForm label={"Email"} error={errorMail} onChange={setEmail} />
+          <InputForm
+            label={"Password"}
+            error={errorPassword}
+            onChange={setPassword}
+            isSecure={true}
+          />
+        </View>
         <View style={styles.submit}>
           {result.isLoading ? (
             <ActivityIndicator size="large" color="#0000ff" />
@@ -90,22 +92,22 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    marginHorizontal:35
+    marginHorizontal: 5
   },
   containerForm: {
     justifyContent: 'space-around',
     backgroundColor: colors.avocado,
     height: '80%',
-    marginHorizontal: 35,
-    borderBottomLeftRadius:20,
-    borderBottomRightRadius:20,
-    borderTopRightRadius:20,
+    marginHorizontal: 5,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    borderTopRightRadius: 20,
   },
   container: {
     backgroundColor: colors.jet,
-    gap:0,
+    gap: 0,
     padding: 30,
-    height:'100%'
+    height: '100%'
   },
   submit: {
     alignItems: "center",
@@ -113,23 +115,23 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 30,
     color: colors.ivory,
-    flexDirection:'row',
-    alignItems:'center'
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   btnRegister: {
     width: '50%',
     justifyContent: 'center',
     alignItems: 'center'
   },
-  containerSubtitle:{
-    backgroundColor:colors.avocado,
-    width:'50%',
-    justifyContent:'center',
-    alignItems:'center',
-    height:50,
-    borderTopLeftRadius:15,
-    borderTopRightRadius:15,
-    flexDirection:'row',
-    alignItems:'center'
+  containerSubtitle: {
+    backgroundColor: colors.avocado,
+    width: '50%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 50,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 });

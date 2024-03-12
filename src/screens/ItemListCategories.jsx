@@ -4,7 +4,7 @@ import ProductItem from "../components/ProductItem";
 import Search from "../components/Search";
 import { useSelector } from "react-redux";
 import { useGetProductsByCategoryQuery } from "../services/shopService";
-
+import {colors} from '../global/colors'
 function ItemListCategories({ navigation }) {
   const [products, setProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
@@ -33,6 +33,7 @@ function ItemListCategories({ navigation }) {
         data={products}
         renderItem={({ item }) => <ProductItem product={item} navigation={navigation} />}
         keyExtractor={(item) => item.id}
+        style={styles.flatlist}
       />
     </View>
   );
@@ -47,5 +48,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor:colors.jet
   },
+  flatlist:{
+    overflow:'hidden'
+  }
 });

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Image, Pressable, StyleSheet, Text, useWindowDimensions } from "react-native";
+import { Image, Pressable, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import Card from "./Card";
+import { colors } from '../global/colors'
 
 const ProductItem = ({ product, navigation }) => {
   const [isPortrait, setIsPortrait] = useState(true);
@@ -21,55 +22,68 @@ const ProductItem = ({ product, navigation }) => {
   }, [width, height]);
 
   return (
-    <>
-      <Pressable style={styles.card} onPress={() => navigation.navigate("ItemDetail", {id: product.id})}>
-        <Card
-          style={{
-            marginVertical: 20,
-            flexDirection: "row",
-            justifyContent: "space-between",
-          }}
-        >
-          <Text style={width < 350 ? styles.textMin : styles.text}>{product.title}</Text>
-          <Image
-            style={styles.image}
-            resizeMode="cover"
-            source={{ uri: product.thumbnail }}
-          />
+    <View style={styles.container}>
+      <Pressable style={styles.cardContainer} onPress={() => navigation.navigate("ItemDetail", { id: product.id })}>
+        <Card style={styles.card}>
+          <View style={styles.containerText}>
+            <Text style={width < 350 ? styles.textMin : styles.text}>{product.title}</Text>
+          </View>
+          <View style={styles.containerImg}>
+            <Image
+              style={styles.image}
+              resizeMode="cover"
+              source={{ uri: product.images[0] }}
+            />
+          </View>
         </Card>
       </Pressable>
-    </>
+    </View>
   );
 };
 
 export default ProductItem;
 
 const styles = StyleSheet.create({
+  container: {
+  },
+  cardContainer: {
+    width: '100%',
+  },
   card: {
-    height: 100,
-    padding: 20,
     margin: 15,
-    borderWidth: 2,
     borderRadius: 10,
-    flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    gap: 4
+    gap: 4,
+    width: '90%',
+  },
+  containerImg: {
+
   },
   image: {
-    minHeight: 90,
-    minWidth: 90,
-    width: "30%",
+    minHeight: 300,
+    minWidth: 300,
     borderRadius: 5,
   },
+  containerText:{
+    position: 'absolute',
+    zIndex: 10,
+    backgroundColor: colors.orange,
+    padding: 5,
+    width:250,
+    alignItems:'center',
+    borderBottomRightRadius:10,
+    borderBottomLeftRadius:10,
+  },
   text: {
-    width: "70%",
+    width: "100%",
     fontFamily: "InterRegular",
-    fontSize: 20,
+    fontSize: 25,
+    textAlign:'center'
   },
   textMin: {
     width: "70%",
     fontFamily: "InterRegular",
-    fontSize: 15,
+    fontSize: 25
   },
 });
