@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable,Alert } from "react-native";
 import React, { useEffect, useState } from "react";
 import allProducts from "../data/products.json";
 import { colors } from "../global/colors";
@@ -13,7 +13,10 @@ const ItemDetail = ({ navigation, route }) => {
   const dispatch = useDispatch()
 
   const onAddCart = () => {
-    dispatch(addItem({...product, quantity: 1}))
+    dispatch(addItem({ ...product, quantity: 1 }))
+    Alert.alert( `Agregaste ${product.title} a tu carrito`,'Agregado al carrito' [
+      {text: 'OK', onPress: () => console.log('OK Pressed')}
+    ])
   }
 
   useEffect(() => {
@@ -31,12 +34,15 @@ const ItemDetail = ({ navigation, route }) => {
             resizeMode="cover"
           />
           <View style={styles.textContainer}>
-            <Text style={styles.descriptionText}>{product.title}</Text>
+            <Text style={styles.title}>{product.title}</Text>
             <Text style={styles.descriptionText}>{product.description}</Text>
             <Text style={styles.descriptionTextPrice}>${product.price}</Text>
-            <Pressable style={styles.buy} onPress={onAddCart}>
-              <Text style={styles.buyText}>Add to cart</Text>
-            </Pressable>
+            <View style={styles.containerBtn}>
+              <Pressable style={styles.buy} onPress={onAddCart}>
+                <Text style={styles.buyText}>Add to cart</Text>
+              </Pressable>
+            </View>
+
           </View>
         </View>
       ) : (
@@ -54,6 +60,7 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     width: "100%",
+    backgroundColor: colors.jet
   },
   container: {
     flexDirection: "column",
@@ -64,34 +71,47 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: 400,
-    marginVertical: 15,
   },
   textContainer: {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
     padding: 6,
+    marginTop: -40,
+    backgroundColor: colors.avocado,
+    width: '90%',
+    zIndex: 20,
+    borderRadius: 10,
+  },
+  title: {
+    fontSize: 25
   },
   descriptionText: {
     fontFamily: "InterRegular",
     fontSize: 16,
-    color: "black",
+    color: colors.ivory,
     paddingVertical: 4,
+
   },
   descriptionTextPrice: {
     fontFamily: "InterRegular",
-    fontSize: 25,
+    fontSize: 20,
     color: "black",
     paddingVertical: 6,
   },
   buy: {
     padding: 10,
     borderRadius: 6,
-    backgroundColor: colors.blue_300,
+    backgroundColor: colors.orange,
   },
   buyText: {
     fontFamily: "InterBold",
     fontSize: 22,
     color: "white",
   },
+  containerBtn:{
+    width:'100%',
+    alignItems:'center',
+    justifyContent:'center'
+  }
 });

@@ -47,11 +47,21 @@ export const cartSlice = createSlice({
       }
     },
     removeItem: (state, action) => {
-      //Logica para remover el producto
+      // Encuentra el índice del producto que deseas eliminar
+      const index = state.value.items.findIndex(item => item.id === action.payload);
+      if (index !== -1) {
+        state.value.items.splice(index, 1);
+      }
+      // Actualiza el total del carrito
+      state.value.total = state.value.items.reduce((total, item) => total + (item.price * item.quantity), 0);
     },
+    clearCart:(state)=>{
+      state.value.items = [];
+      state.value.total = 0;
+    }
   },
 });
 
-export const { addItem, removeItem } = cartSlice.actions;
+export const { addItem, removeItem, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

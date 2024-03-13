@@ -4,7 +4,6 @@ import CategoryItem from "./CategoryItem";
 import {colors} from "../global/colors"
 
 function Categories({ navigation }) {
-  // const categories = useSelector((state) => state.shopReducer.value.categories);
 
   const { data, isLoading, error } = useGetCategoriesQuery();
 
