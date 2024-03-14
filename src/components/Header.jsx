@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     color: colors.vermillion,
     fontSize: 30,
     paddingTop:35,
-    fontWeight:'bold',
+    fontWeight:'900',
+    fontFamily:'Comforta'
   },
 });

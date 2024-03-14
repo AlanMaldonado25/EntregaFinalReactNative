@@ -47,22 +47,27 @@ const styles = StyleSheet.create({
     gap: 15,
     alignItems: "center",
     justifyContent: "flex-start",
+    backgroundColor:colors.jet,
+    height:'100%'
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
+    borderRadius:'50%'
   },
   button: {
     width: "80%",
     elevation: 10,
-    backgroundColor: colors.blue_400,
+    backgroundColor: colors.orange,
     justifyContent: "center",
     alignItems: "center",
     padding: 8,
+    borderRadius:10
   },
   text: {
-    fontFamily: "InterRegular",
+    fontFamily: 'Comforta',
     fontSize: 18,
-    color: "white",
+    color: colors.jet,
+    fontWeight:'bold'
   },
 });

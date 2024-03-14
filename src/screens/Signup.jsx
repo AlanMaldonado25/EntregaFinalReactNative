@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.jet,
     gap: 0,
     padding: 30,
-    height: '100%'
+    height: '100%',
   },
   containerButton: {
     flexDirection: "row",
@@ -125,7 +125,8 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: colors.ivory,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    fontFamily:'Comforta'
   },
   containerSubtitle: {
     backgroundColor: colors.avocado,
@@ -140,6 +141,7 @@ const styles = StyleSheet.create({
   btnLogin: {
     width: '50%',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    fontFamily:'Comforta'
   }
 });

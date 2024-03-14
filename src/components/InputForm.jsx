@@ -38,14 +38,14 @@ const styles = StyleSheet.create({
   label: {
     width: "90%",
     fontSize: 25,
-    fontFamily: "InterRegular",
+    fontFamily:'Comforta',
     color:colors.jet,
     marginVertical:5,
   },
   error: {
     fontSize: 20,
     color: colors.vermillion,
-    fontFamily: "InterRegular",
+    fontFamily:'Comforta',
     fontStyle: "italic",
     marginTop:10,
   },
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 3,
     borderBottomColor: colors.jet,
     padding: 2,
-    fontFamily: "InterRegular",
+    fontFamily:'Comforta',
     fontSize: 20,
     color:colors.ivory
   },

@@ -4,6 +4,8 @@ import * as ImagePicker from "expo-image-picker";
 import { useDispatch, useSelector } from "react-redux";
 import { setCameraImage } from "../features/auth/authSlice";
 import { usePostProfileImageMutation } from "../services/shopService";
+import { colors } from "../global/colors";
+import { Entypo } from '@expo/vector-icons';
 
 const ImageSelector = ({ navigation }) => {
   const [image, setImage] = useState(null);
@@ -47,18 +49,18 @@ const ImageSelector = ({ navigation }) => {
       {image ? (
         <>
           <Image source={{ uri: image }} style={styles.image} />
-          <Pressable onPress={pickImage}>
-            <Text>Take another photo</Text>
+          <Pressable onPress={pickImage} style={styles.button}>
+            <Text style={styles.text}>Take another photo</Text>
           </Pressable>
-          <Pressable onPress={confirmImage}>
-            <Text>Confirm photo</Text>
+          <Pressable onPress={confirmImage} style={styles.button}>
+            <Text style={styles.text}>Confirm photo</Text>
           </Pressable>
         </>
       ) : (
         <View style={styles.noPhotoContainer}>
-          <Text>No photo to show...</Text>
+          <Text style={styles.msg}>No photo to show...</Text>
           <Pressable onPress={pickImage}>
-            <Text>Take a photo</Text>
+          <Entypo name="camera" size={35} color={colors.orange} />
           </Pressable>
         </View>
       )}
@@ -74,6 +76,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 20,
+    backgroundColor:colors.jet,
   },
   image: {
     width: 200,
@@ -82,9 +85,26 @@ const styles = StyleSheet.create({
   noPhotoContainer: {
     width: 200,
     height: 200,
-    borderWidth: 2,
+    borderWidth: 3,
     padding: 10,
     justifyContent: "center",
     alignItems: "center",
+    borderColor:colors.orange,
   },
+  msg:{
+    color:colors.orange,
+    fontSize:16
+  },
+  button:{
+    backgroundColor:colors.orange,
+    padding:5,
+    borderRadius:5,
+
+  },
+  text:{
+    fontSize:16,
+    fontFamily:'Comforta',
+    color:colors.jet,
+    fontWeight:'bold'
+  }
 });

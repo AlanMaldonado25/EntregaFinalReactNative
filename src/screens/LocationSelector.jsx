@@ -59,10 +59,10 @@ const LocationSelector = () => {
 
   return (
     <View style={styles.container}>
-      <Text>My Adresses</Text>
+      <Text style={styles.subtitle}>My Adresses</Text>
       {location.latitude ? (
         <View style={styles.noLocationContainer}>
-          <Text>
+          <Text style={styles.text}>
             Lat: {location.latitude}, long: {location.longitude}
           </Text>
           <MapPreview location={location} />
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     gap: 20,
     paddingBottom: 130,
     paddingTop: 40,
+    backgroundColor:colors.jet
   },
   noLocationContainer: {
     padding: 10,
@@ -97,20 +98,27 @@ const styles = StyleSheet.create({
   },
   address: {
     padding: 10,
-    fontFamily: "InterRegular",
+    fontFamily: "Comforta",
     fontSize: 16,
   },
   button: {
     width: "80%",
     elevation: 10,
-    backgroundColor: colors.blue_400,
+    backgroundColor: colors.orange,
     justifyContent: "center",
     alignItems: "center",
-    padding: 15,
+    padding: 10,
+    borderRadius:10
   },
   text: {
-    fontFamily: "InterRegular",
+    fontFamily: "Comforta",
     fontSize: 18,
     color: "white",
   },
+  subtitle:{
+    color:colors.orange,
+    fontSize:20,
+    fontFamily:'Comforta',
+    fontWeight:'bold'
+  }
 });

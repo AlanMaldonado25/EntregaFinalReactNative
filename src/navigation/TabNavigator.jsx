@@ -26,7 +26,7 @@ const TabNavigator = () => {
             return (
               <View style={styles.tabContainer}>
                 <FontAwesome6 name="shop" size={30} color={focused ? colors.orange : colors.ivory} />
-                <Text style={{ color: focused ? colors.orange : colors.ivory, marginTop:5}}>Shop</Text>
+                <Text style={{ color: focused ? colors.orange : colors.ivory, marginTop:5,fontFamily:'Comforta'}}>Shop</Text>
               </View>
             );
           },
@@ -44,7 +44,7 @@ const TabNavigator = () => {
                   size={30}
                   color={focused ? colors.orange : colors.ivory}
                 />
-                <Text style={{ color:focused ? colors.orange : colors.ivory, marginTop:5}}>Cart</Text>
+                <Text style={{ color:focused ? colors.orange : colors.ivory, marginTop:5,fontFamily:'Comforta'}}>Cart</Text>
               </View>
             );
           },
@@ -62,7 +62,7 @@ const TabNavigator = () => {
                   size={30}
                   color={focused ? colors.orange : colors.ivory}
                 />
-                <Text style={{ color:focused ? colors.orange : colors.ivory, marginTop:5}}>Orders</Text>
+                <Text style={{ color:focused ? colors.orange : colors.ivory, marginTop:5,fontFamily:'Comforta'}}>Orders</Text>
               </View>
             );
           },
@@ -80,7 +80,7 @@ const TabNavigator = () => {
                   size={30}
                   color={focused ? colors.orange : colors.ivory}
                 />
-                <Text style={{ color:focused ? colors.orange : colors.ivory, marginTop:5,width:100,textAlign:'center'}}>My profile</Text>
+                <Text style={{ color:focused ? colors.orange : colors.ivory, marginTop:5,width:100,textAlign:'center',fontFamily:'Comforta'}}>My profile</Text>
               </View>
             );
           },

@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
         color: colors.jet,
         fontFamily: 'InterRegular',
         fontSize: 25,
-        color:colors.jet
+        color:colors.jet,
+        fontFamily:'Comforta'
     },
 });
 

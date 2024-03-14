@@ -77,13 +77,13 @@ const styles = StyleSheet.create({
   },
   text: {
     width: "100%",
-    fontFamily: "InterRegular",
+    fontFamily:'Comforta',
     fontSize: 25,
     textAlign:'center'
   },
   textMin: {
     width: "70%",
-    fontFamily: "InterRegular",
+    fontFamily:'Comforta',
     fontSize: 25
   },
 });

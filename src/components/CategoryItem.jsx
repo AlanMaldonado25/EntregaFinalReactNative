@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     textTransform:'uppercase',
     color:colors.ivory,
-    fontWeight:'bold'
+    fontWeight:'bold',
+    fontFamily:'Comforta'
   },
 });

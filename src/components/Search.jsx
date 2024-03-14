@@ -62,5 +62,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     borderColor:colors.orange,
     color:colors.ivory,
+    fontFamily:'Comforta',
   },
 });

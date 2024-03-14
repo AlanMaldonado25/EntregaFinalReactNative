@@ -16,7 +16,7 @@ const Orders = () => {
     ...ordersObject[key]
   }))
   return (
-    <View>
+    <View style={styles.container}>
       {ordersArray.length > 0 ? (
       <FlatList
         data={ordersArray}
@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     backgroundColor:colors.orange,
     color:colors.jet,
     padding:40,
-    
+    fontFamily:'Comforta',
+    borderRadius:15
   },
   containerNoOrders:{
     alignItems:'center',
@@ -55,5 +56,9 @@ const styles = StyleSheet.create({
     backgroundColor:colors.jet,
     height:'100%',
 
+  },
+  container:{
+    backgroundColor:colors.jet,
+    height: '100%'
   }
 });

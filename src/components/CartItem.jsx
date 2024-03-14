@@ -32,7 +32,7 @@ const CartItem = ({ item }) => {
 
       <Pressable onPress={remove}>
         <FontAwesome6 name="delete-left" size={30} color={colors.vermillion} />
-        <Text style={{ color: colors.jet, fontSize: 16 }}>Borrar</Text>
+        <Text style={{ color: colors.jet, fontSize: 16,fontFamily:'Comforta', }}>Borrar</Text>
       </Pressable>
     </View>
   )
@@ -67,18 +67,21 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 20,
     color: colors.jet,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily:'Comforta',
   },
   containerDescripcion: {
     gap: 5
   },
   cantidad: {
     fontSize: 18,
-    color: colors.jet
+    color: colors.jet,
+    fontFamily:'Comforta',
   },
   precio: {
     fontSize: 20,
-    color: colors.jet
+    color: colors.jet,
+    fontFamily:'Comforta',
   },
   icono: {
     height: 60,

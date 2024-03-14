@@ -5,13 +5,14 @@ import { usePostOrderMutation } from "../services/shopService";
 import {colors} from '../global/colors'
 import { clearCart } from "../features/shop/cartSlice";
 const Cart = () => {
+  
   const cartItems = useSelector((state) => state.cartReducer.value.items);
   const total = useSelector((state) => state.cartReducer.value.total);
   const [triggerPost, result] = usePostOrderMutation()
   const dispatch = useDispatch();
-
+  const date = new Date().toISOString();
   const confirmCart = ()=> {
-    triggerPost({ total, cartItems, user: "loggedUser"})
+    triggerPost({ total, cartItems,date, user: 'LoggedUser'})
     dispatch(clearCart())
     Alert.alert( 'Compra realizada','Compra realizada' [
       {text: 'OK', onPress: () => console.log('OK Pressed')}
@@ -68,7 +69,8 @@ const styles = StyleSheet.create({
   },confirm:{
     fontSize:25,
     fontWeight:'bold',
-    color:colors.jet
+    color:colors.jet,
+    fontFamily:'Comforta',
   },
   total:{
     fontSize:30,

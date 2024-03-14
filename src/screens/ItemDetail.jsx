@@ -84,17 +84,18 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   title: {
-    fontSize: 25
+    fontSize: 25,
+    fontFamily:'Comforta',
   },
   descriptionText: {
-    fontFamily: "InterRegular",
+    fontFamily:'Comforta',
     fontSize: 16,
     color: colors.ivory,
     paddingVertical: 4,
 
   },
   descriptionTextPrice: {
-    fontFamily: "InterRegular",
+    fontFamily:'Comforta',
     fontSize: 20,
     color: "black",
     paddingVertical: 6,
@@ -105,9 +106,10 @@ const styles = StyleSheet.create({
     backgroundColor: colors.orange,
   },
   buyText: {
-    fontFamily: "InterBold",
+    fontFamily:'Comforta',
     fontSize: 22,
     color: "white",
+    fontWeight:'bold'
   },
   containerBtn:{
     width:'100%',
