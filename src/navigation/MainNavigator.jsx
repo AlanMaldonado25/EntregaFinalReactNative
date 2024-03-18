@@ -5,7 +5,8 @@ import AuthStack from "./AuthStack";
 import { NavigationContainer } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
 import { useGetProfileImageQuery, useGetUserLocationQuery } from "../services/shopService";
-import { setProfileImage, setUserLocation } from "../features/auth/authSlice";
+import { setProfileImage, setUser, setUserLocation } from "../features/auth/authSlice";
+import { fetchSessions } from "../db";
 
 const MainNavigator = () => {
   const {user, localId} = useSelector(state => state.authReducer.value)
@@ -16,7 +17,6 @@ const MainNavigator = () => {
 
   useEffect(()=> {
     if(data) {
-      console.log(data.image);
       dispatch(setProfileImage(data.image))
     }
     if(location) {
@@ -24,6 +24,19 @@ const MainNavigator = () => {
     }
   }, [data, location])
 
+  useEffect(()=>{
+    (async () => {
+      try{
+        const session = await fetchSessions();
+        if(session?.rows.length){
+          const user = session.rows._array[0]
+          dispatch(setUser(user));
+        }
+      }catch(error){
+        console.log(error.message)
+      }
+    })
+  },[])
   return (
     <NavigationContainer>{user ? <TabNavigator /> : <AuthStack />}</NavigationContainer>
   );

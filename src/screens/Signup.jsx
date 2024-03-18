@@ -37,7 +37,6 @@ const Signup = ({ navigation }) => {
       triggerSignup({ email, password });
       console.log("Registro exitoso");
     } catch (err) {
-      console.log("path", err.path);
       switch (err.path) {
         case "email":
           setErrorMail(err.message);
@@ -122,7 +121,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   subtitle: {
-    fontSize: 30,
+    fontSize: 25,
     color: colors.ivory,
     flexDirection: 'row',
     alignItems: 'center',

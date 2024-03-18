@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import React from "react";
 import {colors} from '../global/colors'
 
@@ -10,9 +10,10 @@ const OrderItem = ({ item }) => {
       0
     )
     : 0;
+    const { width, height } = useWindowDimensions();
   return (
     <View style={styles.container}>
-      <View style={styles.card}>
+      <View style={width < 550 ? styles.celu : styles.card}>
         <Text style={styles.text}>Usuario: {item.user}</Text>
         <Text style={styles.text}>{item.date}</Text>
         <Text style={styles.text}>${item.total}</Text>
@@ -24,9 +25,6 @@ const OrderItem = ({ item }) => {
 export default OrderItem;
 
 const styles = StyleSheet.create({
-  container: {
-    height:'100%',
-  },
   card:{
     flexDirection:'row',
     margin:10,
@@ -40,5 +38,13 @@ const styles = StyleSheet.create({
     fontSize:18,
     color:colors.jet,
     fontWeight:'bold'
+  },
+  celu:{
+    backgroundColor:colors.orange,
+    flexDirection:'column',
+    margin:5,
+    gap:5,
+    alignItems:'center',
+    borderRadius:10
   }
 });

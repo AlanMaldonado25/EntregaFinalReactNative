@@ -16,7 +16,6 @@ function ItemListCategories({ navigation }) {
   const { data: productsFilteredByCategory, isLoading, error} = useGetProductsByCategoryQuery(category)
 
   useEffect(() => {
-    console.log(productsFilteredByCategory);
     if (productsFilteredByCategory) {
         const productsRaw = Object.values(productsFilteredByCategory)
         const productsFiltered = productsRaw.filter((product) =>

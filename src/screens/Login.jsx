@@ -14,6 +14,7 @@ import { setUser } from "../features/auth/authSlice";
 import { loginSchema } from "../validations/loginSchema";
 import { colors } from "../global/colors";
 import { EvilIcons } from "@expo/vector-icons";
+import { insertSession } from "../db";
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -25,9 +26,13 @@ const Login = ({ navigation }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(result);
     if (result.data) {
       dispatch(setUser(result.data));
+      insertSession({
+        email: result.data.email,
+        localId:result.data.localId,
+        token: result.data.token
+      })
     }
   }, [result]);
 
@@ -75,7 +80,7 @@ const Login = ({ navigation }) => {
         </View>
         <View style={styles.submit}>
           {result.isLoading ? (
-            <ActivityIndicator size="large" color="#0000ff" />
+            <ActivityIndicator size="large" color={colors.jet} />
           ) : (
             <SubmitButton title={"Login"} onPress={onSubmit} />
           )}
@@ -113,10 +118,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   subtitle: {
-    fontSize: 30,
+    fontSize: 25,
     color: colors.ivory,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    fontFamily:'Comforta'
   },
   btnRegister: {
     width: '50%',

@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View ,ActivityIndicator} from "react-native";
 import orders from "../data/orders.json";
 import OrderItem from "../components/OrderItem";
 import { useSelector } from "react-redux";
@@ -6,9 +6,8 @@ import {useGetOrdersQuery} from '../services/shopService'
 import {colors} from '../global/colors'
 const Orders = () => {
   const{data:orders,isLoading} = useGetOrdersQuery();
-  console.log(orders)
   if(isLoading){
-    return <Text style={styles.loading}>Loading...</Text>
+    return (<View style={styles.containerLoader}><ActivityIndicator size="large" color={colors.orange}  /></View>)
   }
   const ordersObject = orders || {};
   const ordersArray = Object.keys(ordersObject).map((key)=>({
@@ -22,6 +21,7 @@ const Orders = () => {
         data={ordersArray}
         renderItem={({ item }) => <OrderItem item={item} />}
         keyExtractor={(order) => order.id}
+        style={styles.flat}
       />
     ) : (
       <View style={styles.containerNoOrders}>
@@ -35,12 +35,10 @@ const Orders = () => {
 export default Orders;
 
 const styles = StyleSheet.create({
-  loading:{
-    backgroundColor:colors.vermillion,
-    color:colors.ivory,
-    justifyContent:'center',
+  containerLoad:{
+    height:'100%',
     alignItems:'center',
-    height:100,
+    justifyContent:'center'
   },
   noOrders:{
     fontSize:30,
@@ -54,11 +52,14 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     backgroundColor:colors.jet,
-    height:'100%',
 
   },
   container:{
     backgroundColor:colors.jet,
-    height: '100%'
+    height: '100%',
+    flex:1,
+  },
+  flat:{
+    height:'100%'
   }
 });

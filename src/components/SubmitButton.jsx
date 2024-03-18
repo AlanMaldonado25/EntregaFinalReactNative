@@ -19,7 +19,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 8,
-        width: '60%'
+        width: '60%',
+        elevation:5,
+        shadowColor:colors.jet,
+        shadowRadius:8,
+        shadowOpacity:0.8,
+
     },
     text: {
         color: colors.jet,

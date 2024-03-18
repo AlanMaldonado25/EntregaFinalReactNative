@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 const MyProfile = ({ navigation }) => {
   const { profileImage, imageCamera } = useSelector((state) => state.authReducer.value);
-
   return (
     <View style={styles.container}>
       {profileImage || imageCamera ? (
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
   image: {
     width: 200,
     height: 200,
-    borderRadius:'50%'
+    borderRadius:10
   },
   button: {
     width: "80%",

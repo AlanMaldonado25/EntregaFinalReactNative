@@ -10,9 +10,10 @@ const Cart = () => {
   const total = useSelector((state) => state.cartReducer.value.total);
   const [triggerPost, result] = usePostOrderMutation()
   const dispatch = useDispatch();
-  const date = new Date().toISOString();
+  const date = new Date().toLocaleString();
+  const {user} = useSelector(state => state.authReducer.value)
   const confirmCart = ()=> {
-    triggerPost({ total, cartItems,date, user: 'LoggedUser'})
+    triggerPost({ total, cartItems,date, user: user})
     dispatch(clearCart())
     Alert.alert( 'Compra realizada','Compra realizada' [
       {text: 'OK', onPress: () => console.log('OK Pressed')}
