@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
   containerLoad:{
     height:'100%',
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
+    backgroundColor:colors.jet,
   },
   noOrders:{
     fontSize:30,
