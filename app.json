@@ -21,7 +21,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.alanmaldo22.entregafinalReactNative"
     },
     "web": {
       "favicon": "./assets/favicon.png"

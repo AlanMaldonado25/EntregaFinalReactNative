@@ -4,8 +4,9 @@ import {
   View,
   Pressable,
   ActivityIndicator,
+  Animated
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useRef} from "react";
 import InputForm from "../components/InputForm";
 import SubmitButton from "../components/SubmitButton";
 import { useLoginMutation } from "../services/authService";
@@ -35,7 +36,7 @@ const Login = ({ navigation }) => {
       })
     }
   }, [result]);
-
+  
   const onSubmit = () => {
     try {
       loginSchema.validateSync({ password, email });
