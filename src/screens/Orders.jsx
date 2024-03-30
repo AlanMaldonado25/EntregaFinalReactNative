@@ -7,7 +7,7 @@ import {colors} from '../global/colors'
 const Orders = () => {
   const{data:orders,isLoading} = useGetOrdersQuery();
   if(isLoading){
-    return (<View style={styles.containerLoader}><ActivityIndicator size="large" color={colors.orange}  /></View>)
+    return (<View style={styles.containerLoader}><ActivityIndicator size="large" color={colors.orange} /></View>)
   }
   const ordersObject = orders || {};
   const ordersArray = Object.keys(ordersObject).map((key)=>({
@@ -35,7 +35,7 @@ const Orders = () => {
 export default Orders;
 
 const styles = StyleSheet.create({
-  containerLoad:{
+  containerLoader:{
     height:'100%',
     alignItems:'center',
     justifyContent:'center',

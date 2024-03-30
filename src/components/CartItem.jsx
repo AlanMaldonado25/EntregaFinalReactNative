@@ -8,10 +8,10 @@ import { removeItem } from '../features/shop/cartSlice';
 const CartItem = ({ item }) => {
   const dispatch = useDispatch()
   const remove = () => {
-    dispatch(removeItem(item.id))
     Alert.alert( `Borraste \n ${item.title} \n del carrito`,'Borrado con exito' [
       {text: 'OK', onPress: () => console.log('OK Pressed')}
     ])
+    dispatch(removeItem(item.id))
   }
   const { width, height } = useWindowDimensions();
   return (

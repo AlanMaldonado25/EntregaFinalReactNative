@@ -33,6 +33,7 @@ function ItemListCategories({ navigation }) {
         renderItem={({ item }) => <ProductItem product={item} navigation={navigation} />}
         keyExtractor={(item) => item.id}
         style={styles.flatlist}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );
